@@ -33,13 +33,13 @@ const LandingPage = () => {
        
         <div className="feature-grid">
           <div className="feature-item left">
-            <img src="./public/pic1.png" alt="Feature 1" className="feature-image" />
+            <img src="./pic1.png" alt="Feature 1" className="feature-image" />
           </div>
           <div className="feature-item bottom">
-            <img src="./public/pic2.jpg" alt="Feature 2" className="feature-image" />
+            <img src="./pic2.jpg" alt="Feature 2" className="feature-image" />
           </div>
           <div className="feature-item right">
-            <img src="./public/pic3.jpg" alt="Feature 3" className="feature-image" />
+            <img src="./pic3.jpg" alt="Feature 3" className="feature-image" />
           </div>
         </div>
       </section>
