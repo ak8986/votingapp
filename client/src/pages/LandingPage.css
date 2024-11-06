@@ -1,0 +1,238 @@
+/* LandingPage.css */
+
+.landing {
+  text-align: center;
+  padding-top: 40px; /* Push content below the navbar */
+  animation: fadeIn 1s ease-in; /* Fade-in animation for the whole page */
+}
+
+.landing-header {
+  margin-top: 20px;
+  position: relative; /* Initial position before it becomes fixed */
+  transition: position 0.5s ease-in, top 0.5s ease-in; /* Smooth transition */
+}
+
+/* CSS for the voting title */
+.voting-title {
+  font-size: 3rem; /* Adjust font size as needed */
+  background: linear-gradient(90deg, #28a745 0%, #007bff 100%); /* Green to Blue gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: bold;
+}
+
+
+/* Optional fade-in animation for the title */
+@keyframes fadeInTitle {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.features {
+  padding: 30px 0;
+}
+
+.feature-grid {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center the feature items horizontally */
+  gap: 20px; /* Add space between the items */
+  flex-wrap: nowrap; /* Prevent wrapping to the next line */
+}
+
+.feature-item {
+  flex-basis: 300px; /* Each item will take up 300px of space */
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  color: #333;
+  text-align: center;
+  transform: translateY(20px); /* Start slightly lower */
+  opacity: 0; /* Start invisible */
+  animation: slideUp 0.5s forwards; /* Slide up animation */
+}
+
+/* Keyframes for fade-in and slide-up animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0); /* Move to original position */
+    opacity: 1; /* Fade in */
+  }
+}
+
+/* Additional animations for different directions */
+.feature-item.left {
+  animation: slideInLeft 0.5s forwards; /* Slide in from left */
+}
+
+.feature-item.bottom {
+  animation: slideInUp 0.5s forwards; /* Slide in from bottom */
+}
+
+.feature-item.right {
+  animation: slideInRight 0.5s forwards; /* Slide in from right */
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%); /* Start from left */
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    transform: translateX(0); /* Move to original position */
+    opacity: 1; /* Fade in */
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%); /* Start from right */
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    transform: translateX(0); /* Move to original position */
+    opacity: 1; /* Fade in */
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%); /* Start from bottom */
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    transform: translateY(0); /* Move to original position */
+    opacity: 1; /* Fade in */
+  }
+}
+
+.feature-image {
+  width: 100%; /* Ensure the image is responsive */
+  height: auto;
+  max-height: 200px; /* Control the maximum height of images */
+  object-fit: cover; /* Ensure the image covers the container properly without distortion */
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.cta-section {
+  margin-top: 50px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff; /* Use a consistent color */
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+.cta-button.admin-button {
+  background-color: #28a745; /* Different color for admin button */
+}
+
+.cta-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.cta-button.admin-button:hover {
+  background-color: #218838; /* Darker shade for admin button on hover */
+}
+
+.footer {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .feature-grid {
+    flex-direction: column; /* Stack feature items on smaller screens */
+    align-items: center; /* Center align items */
+  }
+
+  .feature-item {
+    flex-basis: 100%; /* Each item takes full width */
+    margin-bottom: 20px; /* Add space between stacked items */
+  }
+
+  .cta-button {
+    width: 90%; /* Make buttons wider on mobile */
+  }
+}
+
+
+
+/* Style for the CTA buttons */
+.cta-section {
+  text-align: center;
+  margin-top: 20px; /* Add some space above the button section */
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center;
+  gap: 10px; /* Space between the buttons */
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #646cff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 200px; /* Ensure buttons are uniform in width */
+  text-align: center;
+}
+
+.cta-button:hover {
+  background-color: #535bf2;
+}
+
+.admin-button {
+  background-color: #2ecc71; /* Different color for the admin button */
+}
+
+.admin-button:hover {
+  background-color: #27ae60;
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f3f4f6;
+  margin-top: 40px;
+}
+
+.footer p {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}
+
+
+

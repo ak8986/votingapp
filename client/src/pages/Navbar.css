@@ -1,0 +1,363 @@
+/* 
+.navbar {
+    background-color: #007bff;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    z-index: 1000; 
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar-logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  .menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+  }
+  
+  .nav-item {
+    height: 60px;
+    margin-right: 15px; 
+  }
+  
+  .nav-links {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .nav-links:hover {
+    background-color: #575757;
+    border-radius: 5px;
+  }
+  
+  .nav-links button {
+    background: #28a745;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .nav-menu {
+      display: #007bff;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #007bff;
+      padding: 10px 0;
+    }
+  
+    .nav-menu.active {
+      display: flex;
+    }
+  
+    .nav-item {
+      width: 100%;
+    }
+  
+    .nav-links {
+      text-align: center;
+      padding: 15px;
+      width: 10%;
+      display: table;
+    }
+  }
+  
+  @media screen and (max-width: 660px) {
+    .nav {
+      display:flex;
+      flex-direction: column;
+      align-items: center
+      ;
+
+    }
+  } */
+
+
+
+
+
+  
+/* .navbar {
+    background-color: #007bff;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    z-index: 1000; 
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .navbar-logo {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  
+  .menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+  }
+  
+  .nav-item {
+    height: 60px;
+    margin-right: 15px; 
+  }
+  
+  .nav-links {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .nav-links:hover {
+    background-color: #575757;
+    border-radius: 5px;
+  }
+  
+  .nav-links button {
+    background: #28a745;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  @media screen and (max-width: 660px) {
+    .menu-icon {
+      
+    }
+    .navbar-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding:20px;
+    }
+    .nav-menu {
+      display: #007bff;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #007bff;
+      padding: 10px 0;
+      justify-content: center;
+     align-items: center;
+    }
+ 
+    .nav-menu.active {
+      display: flex;
+    }
+  
+    .nav-item {
+      width: 30%;
+    }
+  
+    .nav-links {
+      text-align: center;
+      padding: 15px;
+      width: 40%;
+      display: table;
+    }
+  }
+
+  
+    */
+
+
+    .navbar {
+      background-color: #007bff;
+      position: fixed; 
+      top: 0;
+      left: 0;
+      width: 100%; 
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2rem;
+      padding: 0 20px;
+      z-index: 1000; 
+    }
+    
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    
+    .navbar-logo {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5rem;
+    }
+    
+    .menu-icon {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #fff;
+      margin-left: 10px;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+    }
+    
+    .nav-item {
+      height: 60px;
+      margin-right: 15px; 
+    }
+    
+    .nav-links {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.3s ease-in-out;
+    }
+    
+    .nav-links:hover {
+      background-color: #575757;
+      border-radius: 5px;
+    }
+    
+    .nav-links button {
+      background: #28a745;
+      border: none;
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+      outline: none;
+    }
+    
+    @media screen and (max-width: 768px) {
+      /* Make the menu icon visible for screens smaller than 768px (tablets/laptops) */
+      .menu-icon {
+        display: block;
+      }
+    
+      /* Collapse nav-menu and show only when the mobile menu is active */
+      .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #007bff;
+        padding: 10px 0;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .nav-menu.active {
+        display: flex;
+      }
+    
+      .nav-item {
+        width: 100%; /* Full width for mobile */
+      }
+    
+      .nav-links {
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+        display: table;
+      }
+    }
+    
+    @media screen and (min-width: 769px) {
+      /* Make sure the nav-menu is displayed in row for screens larger than 769px */
+      .nav-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: auto;
+        position: static;
+        background-color: transparent;
+        padding: 0;
+      }
+    
+      .nav-item {
+        margin-right: 20px;
+        width: auto;
+      }
+    
+      .nav-links {
+        padding: 10px 20px;
+        display: flex;
+      }
+    
+      /* Hide the menu icon for larger screens (laptops/desktops) */
+      .menu-icon {
+        display: none;
+      }
+    }
+    
