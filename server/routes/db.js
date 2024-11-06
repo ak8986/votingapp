@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
-    //  const mongoURL = 'mongodb://localhost:27017/voting';
+    
     // const mongoURL = process.env.MONGODB_URL;
  const mongoURL = process.env.MONGO_URL_LOCAL
 //setup mongodb connection
