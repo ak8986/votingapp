@@ -44,49 +44,7 @@ const Register = () => {
     });
   };
 
-  // Handle form submission
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   setError("");
-  //   setSuccessMessage("");
 
-  //   try {
-  //     // Send a POST request to your backend to register the user
-  //     console.log("mai aaya");
-  //     const response = await axios.post(
-  //       `${import.meta.env.VITE_PUBLIC_BACKEND_URL}/user/signup`,
-  //       formData
-  //     );
-
-  //     if (response.status === 200) {
-  //       setSuccessMessage("Registration successful! You can now log in.");
-
-  //       // Store the token in a cookie using js-cookie
-  //       const { token } = response.data;
-  //       localStorage.setItem("token", response.data.token);
-
-  //       // Clear the form after successful registration
-  //       setFormData({
-  //         name: "",
-  //         age: "",
-  //         email: "",
-  //         mobile: "",
-  //         address: "",
-  //         aadharCardNumber: "",
-  //         password: "",
-  //       });
-
-  //       navigate("/candidate/vote");
-  //     } else {
-  //       console.log("i am error[[[[[[[");
-  //       toast.error("Bad credentials");
-  //     }
-  //   } catch (err) {
-  //     setError("Registration failed. Please try again.");
-  //     console.error("Error during registration:", err);
-  //     toast.error("Bad credentials");
-  //   }
-  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -235,9 +193,7 @@ const Register = () => {
     </form>
   </div>
 
-  <div className="right-image">
-    <img src="path_to_right_image.jpg" alt="Right Image" />
-  </div>
+
 </div>
 
   );
