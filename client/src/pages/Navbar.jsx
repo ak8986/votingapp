@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios'; // Import axios for API calls
+import { useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [voteCount, setVoteCount] = useState(null); // State for vote count
+  const navigate = useNavigate();
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -61,6 +63,7 @@ const Navbar = () => {
                   className="nav-links"
                   onClick={() => {
                     localStorage.removeItem('token');
+                    navigate('/');
                     window.location.reload();
                     handleLinkClick();
                   }}

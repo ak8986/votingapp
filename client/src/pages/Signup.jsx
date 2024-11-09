@@ -130,6 +130,7 @@ const Register = () => {
           name="age"
           value={formData.age}
           onChange={handleInputChange}
+          placeholder="Minimum age:18 years"
           required
         />
       </div>
@@ -183,6 +184,8 @@ const Register = () => {
           name="password"
           value={formData.password}
           onChange={handleInputChange}
+          placeholder="Must be at least 4 characters"
+          data-hint="Enter Password"
           required
         />
       </div>
