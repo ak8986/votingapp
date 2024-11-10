@@ -108,84 +108,174 @@ const ManageCandidates = () => {
     navigate('/candidate/add'); // Navigate to the AddCandidate route
   };
 
-  return (
-    <div className="container">
-      <div className="form-container"> {/* Center container */}
-        <h1 className="text-3xl font-bold text-center text-slate-800 mb-6">Manage Candidates</h1>
+//   return (
+//     <div className="container">
+//       <div className="form-container"> {/* Center container */}
+//         <h1 className="text-3xl font-bold text-center text-slate-800 mb-6">Manage Candidates</h1>
 
-        {/* Add Candidate Button */}
-        <div className="text-center mb-6">
-          <button onClick={handleAddCandidateClick} className="bg-green-500 text-white p-2 rounded-lg">
-            Add Candidate
-          </button>
-        </div>
+//         {/* Add Candidate Button */}
+//         <div className="text-center mb-6">
+//           <button onClick={handleAddCandidateClick} className="bg-green-500 text-white p-2 rounded-lg">
+//             Add Candidate
+//           </button>
+//         </div>
 
-        {/* Display the list of candidates with both "Delete" and "Edit" buttons */}
-        <div className="candidate-list mb-6">
-          <h2 className="text-xl font-semibold mb-4">Select a candidate to manage:</h2>
-          <ul className="space-y-4">
-            {candidates.map((candidate) => (
-              <li key={candidate._id} className="flex justify-between items-center bg-slate-100 p-4 rounded-lg shadow-sm">
-                <span className="text-lg font-medium text-slate-700">{candidate.name}</span> {/* Display candidate's name */}
-                <div>
-                  <button onClick={() => handleCandidateSelectForDelete(candidate)} className="text-red-500 mr-4">Delete</button>
-                  <button onClick={() => handleCandidateSelectForEdit(candidate)} className="text-blue-500">Edit</button>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </div>
+//         {/* Display the list of candidates with both "Delete" and "Edit" buttons */}
+//         <div className="candidate-list mb-6">
+//           <h2 className="text-xl font-semibold mb-4">Select a candidate to manage:</h2>
+//           <ul className="space-y-4">
+//             {candidates.map((candidate) => (
+//               <li key={candidate._id} className="flex justify-between items-center bg-slate-100 p-4 rounded-lg shadow-sm">
+//                 <span className="text-lg font-medium text-slate-700">{candidate.name}</span> {/* Display candidate's name */}
+//                 <div>
+//                   <button onClick={() => handleCandidateSelectForDelete(candidate)} className="text-red-500 mr-4">Delete</button>
+//                   <button onClick={() => handleCandidateSelectForEdit(candidate)} className="text-blue-500">Edit</button>
+//                 </div>
+//               </li>
+//             ))}
+//           </ul>
+//         </div>
 
-        {/* Confirm Deletion */}
-        {isConfirming && (
-          <div className="p-4 bg-red-100 text-center rounded-lg">
-            <h2 className="text-lg font-bold mb-4">Are you sure you want to delete {selectedCandidate.name}?</h2>
-            <button onClick={handleDelete} className="bg-red-500 text-white p-2 rounded-lg mr-4">Yes, Delete</button>
-            <button onClick={handleCancel} className="bg-gray-300 p-2 rounded-lg">Cancel</button>
-          </div>
-        )}
+//         {/* Confirm Deletion */}
+//         {isConfirming && (
+//           <div className="p-4 bg-red-100 text-center rounded-lg">
+//             <h2 className="text-lg font-bold mb-4">Are you sure you want to delete {selectedCandidate.name}?</h2>
+//             <button onClick={handleDelete} className="bg-red-500 text-white p-2 rounded-lg mr-4">Yes, Delete</button>
+//             <button onClick={handleCancel} className="bg-gray-300 p-2 rounded-lg">Cancel</button>
+//           </div>
+//         )}
 
-        {/* Update Form */}
-        {selectedCandidate && !isConfirming && (
-          <form onSubmit={handleUpdateSubmit} className="form-content space-y-6"> {/* Center the form */}
-            <h2 className="text-2xl font-bold text-center text-slate-800 mb-6">Edit Candidate</h2>
-            <div className="form-group">
-              <label className="block text-slate-700 font-semibold mb-2">Candidate Name:</label>
-              <input
-                type="text"
-                placeholder="Candidate Name"
-                value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="form-input"
-              />
-            </div>
-            <div className="form-group">
-              <label className="block text-slate-700 font-semibold mb-2">Party Name:</label>
-              <input
-                type="text"
-                placeholder="Party Name"
-                value={formData.party}
-                onChange={(e) => setFormData({ ...formData, party: e.target.value })}
-                className="form-input"
-              />
-            </div>
-            <div className="form-group">
-              <label className="block text-slate-700 font-semibold mb-2">Manifesto:</label>
-              <textarea
-                placeholder="Manifesto"
-                value={formData.manifesto}
-                onChange={(e) => setFormData({ ...formData, manifesto: e.target.value })}
-                className="form-input"
-              />
-            </div>
-            <button type="submit" className="btn">
-              Update Candidate
-            </button>
-          </form>
-        )}
+//         {/* Update Form */}
+//         {selectedCandidate && !isConfirming && (
+//           <form onSubmit={handleUpdateSubmit} className="form-content space-y-6"> {/* Center the form */}
+//             <h2 className="text-2xl font-bold text-center text-slate-800 mb-6">Edit Candidate</h2>
+//             <div className="form-group">
+//               <label className="block text-slate-700 font-semibold mb-2">Candidate Name:</label>
+//               <input
+//                 type="text"
+//                 placeholder="Candidate Name"
+//                 value={formData.name}
+//                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+//                 className="form-input"
+//               />
+//             </div>
+//             <div className="form-group">
+//               <label className="block text-slate-700 font-semibold mb-2">Party Name:</label>
+//               <input
+//                 type="text"
+//                 placeholder="Party Name"
+//                 value={formData.party}
+//                 onChange={(e) => setFormData({ ...formData, party: e.target.value })}
+//                 className="form-input"
+//               />
+//             </div>
+//             <div className="form-group">
+//               <label className="block text-slate-700 font-semibold mb-2">Manifesto:</label>
+//               <textarea
+//                 placeholder="Manifesto"
+//                 value={formData.manifesto}
+//                 onChange={(e) => setFormData({ ...formData, manifesto: e.target.value })}
+//                 className="form-input"
+//               />
+//             </div>
+//             <button type="submit" className="btn">
+//               Update Candidate
+//             </button>
+//           </form>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ManageCandidates;
+
+
+
+return (
+  <div className="container">
+    <div className="form-container"> {/* Center container */}
+      <h1 className='form-title'>Manage Candidates</h1>
+
+      {/* Add Candidate Button */}
+      <div className="text-center mb-6">
+        <button onClick={handleAddCandidateClick} className="btn">
+          Add Candidate
+        </button>
       </div>
+
+      {/* Display the list of candidates with both "Delete" and "Edit" buttons */}
+      <div>
+        <h2 className="form-title">Select a candidate to manage:</h2>
+        <ul className="space-y-4">
+          {candidates.map((candidate) => (
+            <div>
+            <li key={candidate._id} className="candidate-item">
+            <span className="candidate-name">{candidate.name}</span>
+            <div className="button-group">
+                <button onClick={() => handleCandidateSelectForDelete(candidate)} className="delete-btn">Delete</button>
+                <button onClick={() => handleCandidateSelectForEdit(candidate)} className="edit-btn">Edit</button>
+            </div>
+        </li>
+        
+                </div>
+           
+          ))}
+        </ul>
+      </div>
+
+      {/* Confirm Deletion */}
+      {isConfirming && (
+        <div className="p-4 bg-red-100 text-center rounded-lg">
+          <h2 className="form-title">Are you sure you want to delete {selectedCandidate.name}?</h2>
+          <div className="button-group">
+          <button onClick={handleDelete} className="delete-btn">Yes, Delete</button>
+          <button onClick={handleCancel} className="edit-btn">Cancel</button>
+        </div>
+        </div>
+      )}
+
+      {/* Update Form */}
+      {selectedCandidate && !isConfirming && (
+        <form onSubmit={handleUpdateSubmit} className="form-content space-y-6"> {/* Center the form */}
+          <h2 className="text-2xl font-bold text-center text-slate-800 mb-6">Edit Candidate</h2>
+          <div className="form-group">
+            <label className="block text-slate-700 font-semibold mb-2">Candidate Name:</label>
+            <input
+              type="text"
+              placeholder="Candidate Name"
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              className="form-input"
+            />
+          </div>
+          <div className="form-group">
+            <label className="block text-slate-700 font-semibold mb-2">Party Name:</label>
+            <input
+              type="text"
+              placeholder="Party Name"
+              value={formData.party}
+              onChange={(e) => setFormData({ ...formData, party: e.target.value })}
+              className="form-input"
+            />
+          </div>
+          <div className="form-group">
+            <label className="block text-slate-700 font-semibold mb-2">Manifesto:</label>
+            <textarea
+              placeholder="Manifesto"
+              value={formData.manifesto}
+              onChange={(e) => setFormData({ ...formData, manifesto: e.target.value })}
+              className="form-input"
+            />
+          </div>
+          <button type="submit" className="btn">
+            Update Candidate
+          </button>
+        </form>
+      )}
     </div>
-  );
+  </div>
+);
 };
 
 export default ManageCandidates;

@@ -38,7 +38,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <Link to="/" className="navbar-logo" onClick={handleLinkClick}>Voting App</Link>
+        <Link to="/" className="navbar-logo" onClick={handleLinkClick}>iVoteIndia</Link>
         <div className={`menu-icon ${isMobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>
           ☰
         </div>

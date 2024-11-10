@@ -438,6 +438,122 @@ body {
 }
 
 
+/* Center the main container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #f1f5f9; /* Light background */
+}
+
+/* Style for the inner form container */
+.form-container {
+  background-color: #ffffff; /* White background */
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Title style */
+.register-page {
+  font-size: 1.875rem; /* equivalent to text-3xl */
+  font-weight: bold;
+  text-align: center;
+  color: #1e293b; /* Slate color */
+  margin-bottom: 1.5rem; /* Space below the title */
+}
+
+/* Center alignment for the button */
+.text-center {
+  text-align: center;
+  margin-bottom: 1.5rem; /* Bottom margin */
+}
+
+/* Button styling */
+.add-candidate-btn {
+  background-color: #10b981; /* Green background */
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* Candidate list and items */
+.candidate-list {
+  margin-bottom: 1.5rem;
+}
+
+.candidate-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f5f9;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.candidate-name {
+  font-size: 1.125rem; /* equivalent to text-lg */
+  font-weight: 500;
+  color: #334155; /* Slate-700 */
+  margin-right: 1rem; /* Add space between name and buttons */
+}
+
+.button-group {
+  display: flex;
+  gap: 0.75rem; /* Adjusts space between Delete and Edit buttons */
+}
+
+.delete-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  margin-left: 15px;
+}
+
+.delete-btn:hover {
+  background-color: #535bf2;
+}
+
+/* .delete-btn {
+  padding: 10px;
+  font-size: 14px;
+} */
+
+.edit-btn {
+  padding: 10px;
+  width: 100%;
+  background-color: #2ecc71;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.edit-btn:hover {
+  background-color: #27ae60;
+}
+
+
+
+
+
 
 
 
