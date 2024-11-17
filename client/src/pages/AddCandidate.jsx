@@ -1,78 +1,4 @@
-// import React, { useState } from 'react';
-// import axios from 'axios';
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css'; // Import toast styles
 
-// const AddCandidate = () => {
-//   const [formData, setFormData] = useState({
-//     name: '',
-//     party: '',
-//     manifesto: ''
-//   });
-  
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     const token = localStorage.getItem('token');
-    
-//     try {
-//       const response = await axios.post(`${import.meta.env.VITE_PUBLIC_BACKEND_URL}/candidate`, formData, {
-//         headers: {
-//           Authorization: `Bearer ${token}`,
-//         },
-//       });
-      
-//       // Show success toast
-//       toast.success('Candidate added successfully!', {
-//         position: toast.POSITION.TOP_CENTER
-//       });
-
-//       // Clear form fields
-//       setFormData({
-//         name: '',
-//         party: '',
-//         manifesto: ''
-//       });
-
-//       console.log(response.data);
-//     } catch (error) {
-//       console.error('Error adding candidate:', error);
-//       // Show error toast
-//       toast.error('Failed to add candidate. Please try again.', {
-//         position: toast.POSITION.TOP_CENTER
-//       });
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <form onSubmit={handleSubmit}>
-//         <input
-//           type="text"
-//           placeholder="Candidate Name"
-//           value={formData.name}
-//           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-//         />
-//         <input
-//           type="text"
-//           placeholder="Party Name"
-//           value={formData.party}
-//           onChange={(e) => setFormData({ ...formData, party: e.target.value })}
-//         />
-//         <textarea
-//           placeholder="Manifesto"
-//           value={formData.manifesto}
-//           onChange={(e) => setFormData({ ...formData, manifesto: e.target.value })}
-//         />
-//         <button type="submit">Add Candidate</button>
-//       </form>
-
-//       {/* Toast Container to show notifications */}
-//       <ToastContainer />
-//     </div>
-//   );
-// };
-
-// export default AddCandidate;
 
 
 
@@ -104,7 +30,7 @@ const AddCandidate = () => {
     
       // Show success toast with the candidate's name
       toast.success(`Candidate ${formData.name} added successfully!`, {
-        position: toast.POSITION.TOP_CENTER,
+        position: "top-center"
       });
     
       // Clear form fields after successful submission
